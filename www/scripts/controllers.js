@@ -1,10 +1,28 @@
 'use strict';
 angular.module('MusoList.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('UserCtrl', function($scope, $location, loginService){
+
+    $scope.login = function(username, password){
+    	loginService.login(username, password);	
+    }; 
+
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
+.controller('MusosCtrl', function($scope, musoService) {
+
+	$scope.musos = musoService.getAll();
+	console.log('musos',$scope.musos.length);
+	
+})
+
+.controller('MusoDetailsCtrl', function($scope, $stateParams, musoService) {
+
+	$scope.musoDetails = musoService.getMusoDetails($stateParams.musoId)
+
+})
+
+.controller('VenueCtrl', function($scope, Friends) {
   $scope.friends = Friends.all();
 })
 
@@ -12,5 +30,5 @@ angular.module('MusoList.controllers', [])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('ManageCtrl', function($scope) {
 });

@@ -1,0 +1,483 @@
+{
+  "-JfBmRZgWwdxJg5EgceC" : {
+    "email" : "imogenclark.info@gmail.com",
+    "firstName" : "Imogen",
+    "instruments" : [ "acoustic guitar", "singer", "writer" ],
+    "lastName" : "Clark",
+    "location" : "Bowen Mountain - Blue Mountains",
+    "phone" : "0439 063 876",
+    "type" : "muso"
+  },
+  "-JfBmvlcXn0VhqMekG4D" : {
+    "email" : "mrdemsey@hotmail.com",
+    "firstName" : "Murray",
+    "instruments" : [ "drums", "engineer", "percussion", "producer", "writer" ],
+    "lastName" : "Sheridan",
+    "location" : "Woodford - Blue Mountains",
+    "phone" : "0410 807 705",
+    "type" : "muso"
+  },
+  "-JfBndW-oZMFy6K8posg" : {
+    "email" : "gregagar@hotmail.com",
+    "firstName" : "Greg",
+    "instruments" : [ "bass", "engineer", "piano", "producer", "singer", "writer" ],
+    "lastName" : "Agar",
+    "location" : "Parramatta",
+    "phone" : "0410 899 541",
+    "type" : "muso"
+  },
+  "-JfBomMvujMz3PeE8jI1" : {
+    "email" : "gribbin@talk21.com",
+    "firstName" : "Ciaran",
+    "instruments" : [ "acoustic guitar", "guitar", "singer", "producer", "writer" ],
+    "lastName" : "Gribbin",
+    "location" : "Cammeray",
+    "phone" : "0422 021 972",
+    "type" : "muso"
+  },
+  "-JfBpgqlkg6yviBlEcEq" : {
+    "email" : "deanmatthunter@gmail.com",
+    "firstName" : "Matt",
+    "instruments" : [ "bass", "singer" ],
+    "lastName" : "Hunter",
+    "location" : "Chatswood",
+    "phone" : "0419 468 480",
+    "type" : "muso"
+  },
+  "-JfBq3Rx4e214diHpWAs" : {
+    "email" : "peter@peternorthcote.com",
+    "firstName" : "Peter",
+    "instruments" : [ "acoustic guitar", "engineer", "guitar", "producer", "singer", "writer" ],
+    "lastName" : "Northcote",
+    "location" : "Sydney",
+    "phone" : "0412 672 992",
+    "type" : "muso"
+  },
+  "-JfBqWS_1Nr_5L2fXE8P" : {
+    "email" : "terepaidrums@gmail.com",
+    "firstName" : "Terepai",
+    "instruments" : [ "drums", "percussion" ],
+    "lastName" : "Richmond",
+    "location" : "Cronulla",
+    "phone" : "0407 600 399",
+    "type" : "muso"
+  },
+  "-JfBt5Vzg_NWeYi9K5vA" : {
+    "email" : "timgannondrums@gmail.com",
+    "firstName" : "Tim",
+    "instruments" : [ "drums" ],
+    "lastName" : "Gannon",
+    "location" : "Clovelly",
+    "phone" : "0402 576 340",
+    "type" : "muso"
+  },
+  "-JfBtZ11QGGs6khgUHKR" : {
+    "email" : "dariobass@hotmail.com",
+    "firstName" : "Dario",
+    "instruments" : [ "bass", "engineer" ],
+    "lastName" : "Bortolin",
+    "location" : "Strathfield",
+    "phone" : "0408 294 445",
+    "type" : "muso"
+  },
+  "-JfBu1FoKjnlkR3Y7WHs" : {
+    "email" : "sebastian_salz@yahoo.com.au",
+    "firstName" : "Sebastian",
+    "instruments" : [ "bass" ],
+    "lastName" : "Salz",
+    "location" : "Mona Vale",
+    "phone" : "0407 049 783",
+    "type" : "muso"
+  },
+  "-JfBuW0Qm1tluDh4dSW8" : {
+    "email" : "lukelukess@gmail.com",
+    "firstName" : "Luke",
+    "instruments" : [ "acoustic guitar", "bass", "engineer", "guitar", "producer", "singer", "writer" ],
+    "lastName" : "Lukess",
+    "location" : "Mittagong",
+    "phone" : "0419 477 140",
+    "type" : "muso"
+  },
+  "-JfBuwCf8Bhtyvtp9Gml" : {
+    "email" : "jasper6120@hotmail.com",
+    "firstName" : "Jordan",
+    "instruments" : [ "acoustic guitar", "bass", "double bass", "guitar", "producer", "singer", "writer" ],
+    "lastName" : "Colley",
+    "location" : "Mt Riverview - Blue Mountains",
+    "phone" : "0415 081 163",
+    "type" : "muso"
+  },
+  "-JfBvG6RIg3LapwMAxVw" : {
+    "email" : "dave_ferry@hotmail.com",
+    "firstName" : "Dave",
+    "instruments" : [ "drums" ],
+    "lastName" : "Ferry",
+    "phone" : "0402 301 671",
+    "type" : "muso"
+  },
+  "-JfBvUzGcMVC8jZhOc2J" : {
+    "email" : "gordonrytmeister@me.com",
+    "firstName" : "Gordon",
+    "instruments" : [ "drums", "engineer" ],
+    "lastName" : "Rytmeister",
+    "phone" : "0418 782 724",
+    "type" : "muso"
+  },
+  "-JfBvnnla4japQuOgt5E" : {
+    "email" : "alfoster2@hotmail.com",
+    "firstName" : "Ali",
+    "instruments" : [ "drums" ],
+    "lastName" : "Foster",
+    "phone" : "0425 317 288",
+    "type" : "muso"
+  },
+  "-JfBwVrBppgiZEbwfNmO" : {
+    "email" : "sam-clayton@hotmail.com",
+    "firstName" : "Sam",
+    "instruments" : [ "bass" ],
+    "lastName" : "Clayton",
+    "phone" : "0401 989 182",
+    "type" : "muso"
+  },
+  "-JfBwoJOWZtnbiGvY1HN" : {
+    "email" : "peter.hope7@gmail.com",
+    "firstName" : "Pete",
+    "instruments" : [ "bass" ],
+    "lastName" : "Hope",
+    "phone" : "0405 460 717",
+    "type" : "muso"
+  },
+  "-JfBxIzvnVW1HJuXCxA6" : {
+    "email" : "dmolland@gmail.com",
+    "firstName" : "Dave",
+    "instruments" : [ "bass" ],
+    "lastName" : "Molland",
+    "phone" : "0467 532 719",
+    "type" : "muso"
+  },
+  "-JfBy5F1g__o6u_mhl3e" : {
+    "email" : "bigmuff@jakhousden.com",
+    "firstName" : "Jak",
+    "instruments" : [ "guitar" ],
+    "lastName" : "Housden",
+    "type" : "muso"
+  },
+  "-JfByFZadE0IGLAA5J2A" : {
+    "email" : "jhaselwood@mac.com",
+    "firstName" : "James",
+    "lastName" : "Haselwood",
+    "phone" : "0412 171 294",
+    "type" : "muso"
+  },
+  "-JfByV2PFno58A4vnWFP" : {
+    "email" : "evelynduprai@yahoo.com.au",
+    "firstName" : "Evelyn",
+    "instruments" : [ "singer" ],
+    "lastName" : "Duprai",
+    "phone" : "0403 857 453",
+    "type" : "muso"
+  },
+  "-JfByv5N3drvN15tya5g" : {
+    "email" : "stewart@kirwan.com.au",
+    "firstName" : "Stewart",
+    "instruments" : [ "trumpet" ],
+    "lastName" : "Kirwan",
+    "phone" : "0418 627 922",
+    "type" : "muso"
+  },
+  "-JfBzCufyWQzDXoEL_ca" : {
+    "email" : "robyn.loau@optusnet.com.au",
+    "firstName" : "Robyn",
+    "instruments" : [ "singer" ],
+    "lastName" : "Loau",
+    "phone" : "0412 255 144",
+    "type" : "muso"
+  },
+  "-JfBzUD4X0Is515q-Fpq" : {
+    "email" : "petenmoo@tpg.com.au",
+    "firstName" : "Pete",
+    "instruments" : [ "drums" ],
+    "lastName" : "Skelton",
+    "phone" : "0407 697 086",
+    "type" : "muso"
+  },
+  "-JfBzhU0xYNVS2uhHJCx" : {
+    "email" : "aaron.michael@hotmail.co.uk",
+    "firstName" : "Aaron",
+    "instruments" : [ "saxaphone" ],
+    "lastName" : "Michael",
+    "phone" : "0406 554 500",
+    "type" : "muso"
+  },
+  "-JfC-WOuKsxQG8cZywvb" : {
+    "email" : "tash@natashastuart.com",
+    "firstName" : "Natasha",
+    "instruments" : [ "singer" ],
+    "lastName" : "Stuart",
+    "phone" : "0414 011 722",
+    "type" : "muso"
+  },
+  "-JfC-hRDsvUBRMJqA2e5" : {
+    "email" : "marc_malouf@hotmail.com",
+    "firstName" : "Marc",
+    "instruments" : [ "guitar", "singer", "writer" ],
+    "lastName" : "Malouf",
+    "phone" : "0400 088 835",
+    "type" : "muso"
+  },
+  "-JfC-zvmBQvOAXtYdEWj" : {
+    "email" : "joseph@ccent.com.au",
+    "firstName" : "Joseph",
+    "instruments" : [ "agent", "guitar" ],
+    "lastName" : "Calderazzo",
+    "phone" : "0425 322 296",
+    "type" : "muso"
+  },
+  "-JfC0LfVIynBGd0Qn3Tm" : {
+    "email" : "funkstarinternational@gmail.com",
+    "firstName" : "Raymund",
+    "instruments" : [ "guitar" ],
+    "lastName" : "Shek",
+    "phone" : "0416 356 619",
+    "type" : "muso"
+  },
+  "-JfC0au2HJQQ2ml6sVZo" : {
+    "email" : "funkstarinternational@gmail.com",
+    "firstName" : "Raymund",
+    "instruments" : [ "guitar" ],
+    "lastName" : "Shek",
+    "phone" : "0416 356 619",
+    "type" : "muso"
+  },
+  "-JfC0q-YqKQdCGw_0hQh" : {
+    "email" : "cretoli@hotmail.com",
+    "firstName" : "Mark",
+    "instruments" : [ "fiddle", "violin" ],
+    "lastName" : "Oats",
+    "phone" : "0419 666 466",
+    "type" : "muso"
+  },
+  "-JfC19mnq_Euts64gc-f" : {
+    "email" : "vmtam@bigpond.net.au",
+    "firstName" : "Vanessa",
+    "instruments" : [ "violin", "writer" ],
+    "lastName" : "Tammetta",
+    "phone" : "0422 965 135",
+    "type" : "muso"
+  },
+  "-JfC1TI24bYBoj_uLzLJ" : {
+    "email" : "rossjferraro@gmail.com",
+    "firstName" : "Ross",
+    "instruments" : [ "drums" ],
+    "lastName" : "Ferraro",
+    "phone" : "0402 616 979",
+    "type" : "muso"
+  },
+  "-JfC1mBzZpBr51HooQ4i" : {
+    "email" : "pete_drummond@me.com",
+    "firstName" : "Pete",
+    "instruments" : [ "drums", "writer", "engineer" ],
+    "lastName" : "Drummond",
+    "phone" : "0419 403 785",
+    "type" : "muso"
+  },
+  "-JfC23UqJOsxgJnHUT_m" : {
+    "email" : "vinlouwpwee@hotmail.com",
+    "firstName" : "Virginia",
+    "instruments" : [ "singer" ],
+    "lastName" : "Lillye",
+    "phone" : "0416 556 088",
+    "type" : "muso"
+  },
+  "-JfC2E5x5CR7McFhyPrR" : {
+    "email" : "ezzymarshall@gmail.com",
+    "firstName" : "Erin",
+    "instruments" : [ "singer" ],
+    "lastName" : "Marshall",
+    "phone" : "0414 357 300",
+    "type" : "muso"
+  },
+  "-JfC2S1CpKLprLhGDvLv" : {
+    "email" : "info@nickykurta.com",
+    "firstName" : "Nicky",
+    "instruments" : [ "acoustic guitar", "singer" ],
+    "lastName" : "Kurta",
+    "phone" : "0408 908 986",
+    "type" : "muso"
+  },
+  "-JfC7_gTS_bqpYGEri4y" : {
+    "email" : "lanesinclair94@gmail.com",
+    "firstName" : "Lane",
+    "instruments" : [ "acoustic guitar", "singer" ],
+    "lastName" : "Sinclair",
+    "phone" : "0419 884 855",
+    "type" : "muso"
+  },
+  "-JfC7sX22FdoJtRjEypc" : {
+    "email" : "greg@birdyard.com.au",
+    "firstName" : "Greg",
+    "instruments" : [ "trumpet" ],
+    "lastName" : "Hebblewhite",
+    "phone" : "0412 587 186",
+    "type" : "muso"
+  },
+  "-JfC87WZ3YUoVcOq5oDR" : {
+    "email" : "ab2035@yahoo.com",
+    "firstName" : "Andy",
+    "instruments" : [ "drums" ],
+    "lastName" : "Byrnes",
+    "phone" : "0415 725 096",
+    "type" : "muso"
+  },
+  "-JfC8RI7sP9rj1rf4Q0z" : {
+    "email" : "richievez@hotmail.com",
+    "firstName" : "Richie",
+    "instruments" : [ "bass" ],
+    "lastName" : "Vez",
+    "phone" : "0407 009 018",
+    "type" : "muso"
+  },
+  "-JfC8fX7yJe4EX_7UUFm" : {
+    "email" : "richievez@hotmail.com",
+    "firstName" : "Richie",
+    "instruments" : [ "bass" ],
+    "lastName" : "Vez",
+    "phone" : "0407 009 018",
+    "type" : "muso"
+  },
+  "-JfC96Av-k46Q9bGvolf" : {
+    "email" : "carldimataga@ihug.com.au",
+    "firstName" : "Carl",
+    "instruments" : [ "acoustic guitar", "guitar", "writer" ],
+    "lastName" : "Dimitaga",
+    "phone" : "0409 907 257",
+    "type" : "muso"
+  },
+  "-JfC9IyGDXLy31d7ewf8" : {
+    "email" : "chriswrightproductions@hotmail.com",
+    "firstName" : "Chris",
+    "instruments" : [ "guitar" ],
+    "lastName" : "Wright",
+    "phone" : "0401 839 048",
+    "type" : "muso"
+  },
+  "-JfC9eOLV_LL5BJhMoWv" : {
+    "email" : "ldixonmusic@yahoo.com",
+    "firstName" : "Luke",
+    "instruments" : [ "guitar" ],
+    "lastName" : "Dixon",
+    "location" : "Bowral",
+    "phone" : "0413 283 075",
+    "type" : "muso"
+  },
+  "-JfC9tygNcMP1ykXycZY" : {
+    "email" : "ldixonmusic@yahoo.com",
+    "firstName" : "Luke",
+    "instruments" : [ "guitar" ],
+    "lastName" : "Dixon",
+    "location" : "Bowral",
+    "phone" : "0413 283 075",
+    "type" : "muso"
+  },
+  "-JfCA7IRWAPfNlkBjkeg" : {
+    "firstName" : "Fab",
+    "instruments" : [ "drums" ],
+    "lastName" : "Omodei",
+    "phone" : "0416 068 325",
+    "type" : "muso"
+  },
+  "-JfCAIHtdmkTRbLqfI8e" : {
+    "email" : "lloydgyi@gmail.com",
+    "firstName" : "Lloyd",
+    "instruments" : [ "drums", "singer" ],
+    "lastName" : "Gyi",
+    "type" : "muso"
+  },
+  "-JfCAWS2CkT9KFmoeN39" : {
+    "email" : "jamespool10@gmail.com",
+    "firstName" : "James",
+    "instruments" : [ "drums" ],
+    "lastName" : "Pool",
+    "phone" : "0408 406 076",
+    "type" : "muso"
+  },
+  "-JfCAkS1s-cz_R3fqjlL" : {
+    "email" : "dangerray99@yahoo.com.au",
+    "firstName" : "Pete",
+    "instruments" : [ "bass" ],
+    "lastName" : "Nu",
+    "type" : "muso"
+  },
+  "-JfCB8rT6FwDBvbeRszR" : {
+    "email" : "pen2paper@optusnet.com.au",
+    "firstName" : "Ria",
+    "instruments" : [ "singer" ],
+    "lastName" : "Pirrelli",
+    "notes" : "Audiovixen",
+    "phone" : "0417 228 655",
+    "type" : "muso"
+  },
+  "-JfCBMSs_UEbqjV0_mMu" : {
+    "email" : "pen2paper@optusnet.com.au",
+    "firstName" : "Ross",
+    "instruments" : [ "singer" ],
+    "lastName" : "Pirrelli",
+    "phone" : "0405 633 854",
+    "type" : "muso"
+  },
+  "-JfCBY8B5tduQfY3ASBQ" : {
+    "firstName" : "Simon",
+    "instruments" : [ "trumpet", "trombone" ],
+    "lastName" : "Ferenci",
+    "phone" : "0421 634 039",
+    "type" : "muso"
+  },
+  "-JfCDsEucOg_BtM-lTUu" : {
+    "firstName" : "Nick",
+    "instruments" : [ "saxaphone" ],
+    "lastName" : "Bowd",
+    "phone" : "0418 728 118",
+    "type" : "muso"
+  },
+  "-JfCEBAxUW1U7WuBWGvp" : {
+    "firstName" : "Nick",
+    "instruments" : [ "saxaphone" ],
+    "lastName" : "Bowd",
+    "phone" : "0418 728 118",
+    "type" : "muso"
+  },
+  "-JfCEQAtJ3oNcPab9QOG" : {
+    "firstName" : "Ken",
+    "instruments" : [ "saxaphone" ],
+    "phone" : "0425 203 852",
+    "type" : "muso"
+  },
+  "-JfCEYf4bRX5ZmxLXxwf" : {
+    "firstName" : "Davo",
+    "instruments" : [ "percussion" ],
+    "phone" : "0419 446 996",
+    "type" : "muso"
+  },
+  "-JfI9qYuSIn9o7l8F-bl" : {
+    "type" : "venue"
+  },
+  "-JfI9zFx5kPgPQoQdmJg" : {
+    "type" : "venue"
+  },
+  "-JfIJfC5cJQ8A1fzFgG9" : {
+    "name" : "test",
+    "type" : "venue"
+  },
+  "-JfIJggbZ6sXu95aCvRO" : {
+    "type" : "venue"
+  },
+  "-Jffxm95rAkQwCrOVGgJ" : {
+    "email" : "pianogirl007@ihug.com.au",
+    "firstName" : "Bev",
+    "instruments" : [ "piano" ],
+    "lastName" : "Kennedy",
+    "location" : "Annandale",
+    "phone" : "0414542690",
+    "type" : "muso"
+  }
+}

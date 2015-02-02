@@ -3,25 +3,25 @@
   Each tab's child <ion-nav-view> directive will have its own 
   navigation history that also transitions its views in and out.
 -->
-<ion-tabs class="tabs-icon-top tabs-positive">
+<ion-tabs class="tabs-icon-top">
 
 
-  <!-- Muso's Tab -->
-  <ion-tab title="Musos" icon="icon ion-person-stalker" href="#/tab/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
+  <!-- Muso Tab -->
+  <ion-tab title="Musos" icon="icon ion-home" ui-sref="tab.musos">
+    <ion-nav-view name="tab-musos"></ion-nav-view>
   </ion-tab>
 
 
-  <!-- Venue's Tab -->
-  <ion-tab title="Venues" icon="icon ion-home" href="#/tab/friends">
-    <ion-nav-view name="tab-friends"></ion-nav-view>
+  <!-- Venues Tab -->
+  <ion-tab title="Venues" icon="icon ion-heart" ui-sref="tab.venues">
+    <ion-nav-view name="tab-venues"></ion-nav-view>
   </ion-tab>
 
 
-  <!-- Add Tab -->
-  <ion-tab title="Add" icon="icon ion-plus-circled" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
+  <!-- Manage Tab -->
+  <ion-tab title="Add" icon="icon ion-gear-b" ui-sref="tab.manage">
+    <ion-nav-view name="tab-manage"></ion-nav-view>
   </ion-tab>
-
+  
 
 </ion-tabs>

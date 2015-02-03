@@ -1,0 +1,23 @@
+<ion-view title="Find a Muso">
+	<ion-content padding="true" class="has-header">
+	    <form name="searchMusoForm">
+	        <label class="item item-input" name="search-muso">
+	            <i class="icon ion-search placeholder-icon"></i>
+	            <input type="search" placeholder="Find a Muso..." ng-model="searchText">
+	        </label>
+	    </form>
+
+	    <div class="list card" ng-repeat="muso in musos | filter:searchText">
+	        <div class="item item-icon-right" type="item-text-wrap">
+	            <a href="#/tab/muso/{{muso.$id}}"><h2>{{muso.firstName}} {{muso.lastName}}</h2></a>
+				<tel>{{muso.phone}}</tel>
+				<i class="icon ion-chevron-right icon-accessory"></i>
+			</div>
+	        <div class="item item-body">
+            	<ul>
+            		<li ng-repeat="skill in muso.instruments"><small>{{skill}}</small></li>
+            	</ul>
+            </div>
+	    </div>
+	</ion-content>
+</ion-view>

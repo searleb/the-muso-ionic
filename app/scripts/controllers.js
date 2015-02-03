@@ -32,5 +32,10 @@ angular.module('MusoList.controllers', [])
 
 })
 
-.controller('ManageCtrl', function($scope) {
+.controller('ManageCtrl', function($scope, skillsService) {
+
+	$scope.skills = skillsService.getAll();
+
+	// $scope.openModal = skillsService.openModal();
+
 });

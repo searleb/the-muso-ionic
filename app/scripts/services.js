@@ -1,46 +1,36 @@
 'use strict';
 angular.module('MusoList.services', [])
 
-.service('loginService',['$state', function($state) {
-  var loginAuth = {};
+.service('loginService',['$state', '$firebaseAuth', function($state, $firebaseAuth) {
+  // sets up a firebase object for use with $firebaseAuth (think jQuery objects)
+  var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com");
+  var authObj = $firebaseAuth(ref);
+  // gets current auth state
+  var authData = authObj.$getAuth();
+  // redirect from login page if user is already logged in
+  if (authData) {
+    $state.go('tab.musos');
+  } else {
+    console.log("Logged out");
+  }
 
-  // $rootScope.$on("$locationChangeStart", function() {
-  //     // Create a callback which logs the current auth state
-  //     function authDataCallback(authData) {
-  //       if (authData) {
-  //         console.log("User " + authData.uid + " is logged in with " + authData.provider);
-  //         $location.path('/comment');
-  //       } else {
-  //         console.log("User is logged out");
-  //         $location.path('/');
-  //       }
-  //     }
-  //     // Register the callback to be fired every time auth state changes
-  //     $scope.auth.ref = new Firebase("https://base-agents.firebaseio.com");
-  //     $scope.auth.ref.onAuth(authDataCallback);
-  // });
+  this.login = function(username, password){
+    authObj.$authWithPassword({
+      email: username,
+      password: password
+    }).then(function(authData) {
+      $state.go('tab.musos');
+    }).catch(function(error) {
+      console.error("Authentication failed:", error);
+    });
+  }
 
   this.logout = function(){
      $scope.auth.ref.unauth();    
   };
 
-  this.login = function(username, password){
-    console.log('login from service', username, password);
-      loginAuth.ref = new Firebase("https://glowing-inferno-2667.firebaseio.com");
-      loginAuth.ref.authWithPassword({
-        email    : username,
-        password : password
-      }, function(error, authData) {
-        if (error) {
-          alert(error)
-        } else {
-          console.log("Authenticated successfully with payload:", authData);
-          $state.go('tab.musos');
-        }
-      });
-  }
 
-  }])
+}])
 
 .service('musoService', ['$firebase', function($firebase){
     var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/musos");
@@ -68,4 +58,28 @@ angular.module('MusoList.services', [])
       var array = venues.$asArray();
       return array.$getRecord(venueId);
     };
-}]);;
+}])
+
+.service('skillsService', ['$firebase', '$ionicModal', function($firebase, $ionicModal){
+    var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/skills");
+    var skills = $firebase(ref);
+    // var modal;
+    // $ionicModal.fromTemplateUrl('/templates/add-skill-modal.html', {
+    //     scope: modal,
+    //     animation: 'slide-in-up'
+    //   }).then(function(modal) {
+    //     modal.modal = modal;
+    //   });
+    //   this.openModal = function() {
+    //     modal.modal.show();
+    //   };
+    //   this.closeModal = function() {
+    //     modal.modal.hide();
+    //   };
+
+    this.getAll = function () {
+      return skills.$asArray();
+    };
+
+}])
+;

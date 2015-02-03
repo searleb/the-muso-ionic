@@ -12,7 +12,6 @@ angular.module('MusoList.controllers', [])
 .controller('MusosCtrl', function($scope, musoService) {
 
 	$scope.musos = musoService.getAll();
-	console.log('musos',$scope.musos.length);
 	
 })
 
@@ -22,12 +21,15 @@ angular.module('MusoList.controllers', [])
 
 })
 
-.controller('VenueCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('VenueCtrl', function($scope, venueService) {
+	
+	$scope.venues = venueService.getAll();
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
+.controller('VenueDetailsCtrl', function($scope, $stateParams, venueService) {
+  
+  $scope.venueDetails = venueService.getVenueDetails($stateParams.venueId);
+
 })
 
 .controller('ManageCtrl', function($scope) {

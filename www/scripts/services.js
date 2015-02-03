@@ -79,4 +79,18 @@ angular.module('MusoList.services', [])
       var array = musos.$asArray();
       return array.$getRecord(musoId);
     };
-}]);
+}])
+
+.service('venueService', ['$firebase', function($firebase){
+    var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/venues");
+    var venues = $firebase(ref);
+
+    this.getAll = function () {
+      return venues.$asArray();
+    };
+
+    this.getVenueDetails = function(venueId){
+      var array = venues.$asArray();
+      return array.$getRecord(venueId);
+    };
+}]);;

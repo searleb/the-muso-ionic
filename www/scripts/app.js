@@ -71,16 +71,15 @@ angular.module('MusoList', ['ionic', 'config', 'MusoList.controllers', 'MusoList
         }
       }
     })
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
+    .state('tab.venue-detail', {
+      url: '/venue/:venueId',
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
-          controller: 'FriendDetailCtrl'
+        'tab-venues': {
+          templateUrl: 'templates/venue-details.html',
+          controller: 'VenueDetailsCtrl'
         }
       }
     })
-
     .state('tab.manage', {
       url: '/manage',
       views: {

@@ -1,20 +1,25 @@
 <ion-view title="{{musoDetails.firstName}} {{musoDetails.lastName}}">
-  <ion-content has-header="true" padding="true">
-    <div class="list card">
-        <div class="item item-icon-right" type="item-text-wrap">
-            <h2>{{musoDetails.firstName}} {{musoDetails.lastName}}</h2>
-			<tel>{{musoDetails.phone}}</tel>
-			<p>{{musoDetails.email}}</p>
-			<p>{{musoDetails.location}}</p>
-			<p>{{musoDetails.rating}}</p>
-			<p>{{musoDetails.notes}}</p>
-		</div>
-        <div class="item item-body">
-        	<ul>
-        		<li ng-repeat="skill in musoDetails.instruments"><small>{{skill}}</small></li>
-        	</ul>
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+      <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">
+        Back
+      </ion-nav-back-button>
+    </ion-nav-bar>
+      <ion-content has-header="true" padding="true">
+        <div class="list card">
+            <div class="item item-icon-right" type="item-text-wrap">
+                <h2>{{musoDetails.firstName}} {{musoDetails.lastName}}</h2>
+    			<tel>{{musoDetails.phone}}</tel>
+    			<p>{{musoDetails.email}}</p>
+    			<p>{{musoDetails.location}}</p>
+    			<p>{{musoDetails.rating}}</p>
+    			<p>{{musoDetails.notes}}</p>
+    		</div>
+            <div class="item item-body">
+            	<ul>
+            		<li ng-repeat="skill in musoDetails.instruments"><small>{{skill}}</small></li>
+            	</ul>
+            </div>
         </div>
-    </div>
-  </ion-content>
+      </ion-content>
 </ion-view>
 

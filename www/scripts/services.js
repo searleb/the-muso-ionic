@@ -1,7 +1,7 @@
 'use strict';
 angular.module('MusoList.services', [])
 
-.service('loginService',['$state', '$firebaseAuth', function($state, $firebaseAuth) {
+.service('loginService',['$state', '$firebaseAuth', '$ionicLoading', function($state, $firebaseAuth, $ionicLoading) {
   // sets up a firebase object for use with $firebaseAuth (think jQuery objects)
   var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com");
   var authObj = $firebaseAuth(ref);
@@ -15,71 +15,80 @@ angular.module('MusoList.services', [])
   }
 
   this.login = function(username, password){
+    
+    $ionicLoading.show({
+      template: 'Logging in...'
+    });
+
     authObj.$authWithPassword({
       email: username,
       password: password
     }).then(function(authData) {
       $state.go('tab.musos');
+      $ionicLoading.hide();
     }).catch(function(error) {
       console.error("Authentication failed:", error);
+      $ionicLoading.hide();
+      alert("Login failed, please try again.");
     });
   }
 
   this.logout = function(){
-     $scope.auth.ref.unauth();    
-  };
+   authObj.$unauth();
+   $state.go('login');
+ };
 
 
 }])
 
 .service('musoService', ['$firebase', function($firebase){
-    var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/musos");
-    var musos = $firebase(ref);
+  var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/musos");
+  var musos = $firebase(ref).$asArray();
 
-    this.getAll = function () {
-      return musos.$asArray();
-    };
+  this.getAll = function () {
+    return musos;
+  };
 
-    this.getMusoDetails = function(musoId){
-      var array = musos.$asArray();
-      return array.$getRecord(musoId);
-    };
+  this.getMusoDetails = function(musoId){
+    return musos.$getRecord(musoId);
+  };
+
+  this.saveMuso = function(muso){
+    musos.$add(muso);
+  };
 }])
 
 .service('venueService', ['$firebase', function($firebase){
-    var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/venues");
-    var venues = $firebase(ref);
+  var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/venues");
+  var venues = $firebase(ref).$asArray();
 
-    this.getAll = function () {
-      return venues.$asArray();
-    };
+  this.getAll = function () {
+    return venues;
+  };
 
-    this.getVenueDetails = function(venueId){
-      var array = venues.$asArray();
-      return array.$getRecord(venueId);
-    };
+  this.getVenueDetails = function(venueId){
+    return venues.$getRecord(venueId);
+  };
+
+  this.saveVenue = function(venue){
+    venues.$add(venue);
+  }
 }])
 
-.service('skillsService', ['$firebase', '$ionicModal', function($firebase, $ionicModal){
-    var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/skills");
-    var skills = $firebase(ref);
-    // var modal;
-    // $ionicModal.fromTemplateUrl('/templates/add-skill-modal.html', {
-    //     scope: modal,
-    //     animation: 'slide-in-up'
-    //   }).then(function(modal) {
-    //     modal.modal = modal;
-    //   });
-    //   this.openModal = function() {
-    //     modal.modal.show();
-    //   };
-    //   this.closeModal = function() {
-    //     modal.modal.hide();
-    //   };
+.service('skillsService', ['$firebase', '$ionicModal', function($firebase){
+  var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/skills");
+  var skills = $firebase(ref);
+  var skillsArray = skills.$asArray();
 
     this.getAll = function () {
-      return skills.$asArray();
+      return skills.$asObject();
     };
 
-}])
+    this.saveSkill = function(skill){      
+      skillsArray.$add(skill).then(function(ref){
+        alert(skill + ' was saved sucessfully');
+      });
+    };
+
+  }])
 ;

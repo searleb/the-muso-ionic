@@ -1,35 +1,30 @@
-<ion-view title="Account">
-  <ion-content class="has-header padding">
-    <form>
-        <label class="item item-input" name="first-name">
-            <span class="input-label">First Name</span>
-            <input type="text" placeholder="">
-        </label>
-        <label class="item item-input" name="last-name">
-            <span class="input-label">Last Name</span>
-            <input type="text" placeholder="">
-        </label>
-        <label class="item item-input" name="phone">
-            <span class="input-label">Phone Number</span>
-            <input type="tel" placeholder="">
-        </label>
-        <label class="item item-input" name="email">
-            <span class="input-label">Email</span>
-            <input type="email" placeholder="">
-        </label>
-        <label class="item item-input" name="location">
-            <span class="input-label">Location</span>
-            <input type="text" placeholder="">
-        </label>
-        <ion-checkbox ng-repeat="skill in skills">{{skill}}</ion-checkbox>
-        <ion-item class="range range-energized">Rating
-            <input type="range" value="2" min="0" max="5" name="rating">
-        </ion-item>
-        <label class="item item-input" name="notes">
-            <span class="input-label">Notes</span>
-            <input type="text" placeholder="">
-        </label>
-        <button class="button button-positive button-block">Save Muso</button>
-    </form>
-  </ion-content>
+<ion-view title="Manage">
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+      <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">
+        Back
+      </ion-nav-back-button>
+    </ion-nav-bar>
+        <ion-content class="has-header padding">
+                <ion-slide-box>
+                    <!-- add muso -->
+                    <ion-slide>
+                    <h3>Add Muso</h3>
+                        <ng-include src="'views/muso-form.html'"></ng-include>
+                    </ion-slide>
+                    <!-- add venue -->
+                    <ion-slide>
+                        <h3>Add Venue</h3>
+                        <ng-include src="'views/venue-form.html'"></ng-include>
+                    </ion-slide>
+                <ion-slide>
+                <h3>Add Venue</h3>
+                <ng-include src="'views/skills-form.html'"></ng-include>
+                </ion-slide>
+        </ion-slide-box>
+            <button class="button button-positive" ng-click="logout()">Logout</button>
+
+
+        <!-- <button class="button button-positive" ng-click="openModal()">Skills</button> -->
+
+        </ion-content>
 </ion-view>

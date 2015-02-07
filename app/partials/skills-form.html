@@ -1,0 +1,7 @@
+<form ng-submit="saveSkill(newSkill)" novalidate>
+    <label class="item item-input item-floating-label" name="first-name">
+        <span class="input-label">Skill</span>
+        <input type="text" placeholder="Skill" requried ng-model="newSkill">
+    </label>
+    <button class="button button-positive button-block" type="submit" ng-disabled="loginForm.$invalid">Save</button>
+</form>

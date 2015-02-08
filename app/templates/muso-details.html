@@ -1,22 +1,20 @@
-<ion-view title="{{musoDetails.firstName}} {{musoDetails.lastName}}">
-    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
-      <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">
-        Back
-      </ion-nav-back-button>
-    </ion-nav-bar>
+<ion-view title="{{muso.firstName}} {{muso.lastName}}">
+    <ion-nav-buttons side="right">
+      <button class="button button-clear button-light" ng-click="showActionSheet()">Edit</button>
+    </ion-nav-buttons>
       <ion-content has-header="true" padding="true">
         <div class="list card">
             <div class="item item-icon-right" type="item-text-wrap">
-                <h2>{{musoDetails.firstName}} {{musoDetails.lastName}}</h2>
-    			<tel>{{musoDetails.phone}}</tel>
-    			<p>{{musoDetails.email}}</p>
-    			<p>{{musoDetails.location}}</p>
-    			<p>{{musoDetails.rating}}</p>
-    			<p>{{musoDetails.notes}}</p>
+                <h2>{{muso.firstName}} {{muso.lastName}}</h2>
+    			<tel>{{muso.phone}}</tel>
+    			<p>{{muso.email}}</p>
+    			<p>{{muso.location}}</p>
+    			<p>{{muso.rating}}</p>
+    			<p>{{muso.notes}}</p>
     		</div>
             <div class="item item-body">
             	<ul>
-            		<li ng-repeat="skill in musoDetails.instruments"><small>{{skill}}</small></li>
+            		<li ng-repeat="skill in muso.instruments"><small>{{skill}}</small></li>
             	</ul>
             </div>
         </div>

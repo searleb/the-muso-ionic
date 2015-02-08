@@ -47,9 +47,74 @@ angular.module('MusoList.controllers', ["checklist-model"])
 
 })
 
-.controller('MusoDetailsCtrl', function($scope, $stateParams, musoService) {
-	$scope.musoDetails = musoService.getMusoDetails($stateParams.musoId)
+.controller('MusoDetailsCtrl', function($scope, $stateParams, musoService, $ionicModal, $ionicActionSheet, $ionicPopup) {
+	$scope.muso = musoService.getMusoDetails($stateParams.musoId);
+	console.log($scope.muso);
+
+	$scope.saveMuso = function(muso) {
+		console.log('cont', muso);
+		musoService.updateRecord(muso);
+	};
+
+	$scope.deleteMuso = function(muso) {
+		musoService.deleteRecord(muso);
+	};
+
+	$scope.showActionSheet = function() {
+		  // Show the action sheet
+		  var hideSheet = $ionicActionSheet.show({
+		    buttons: [
+		      { text: 'Edit' }
+		    ],
+		    destructiveText: 'Delete',
+		    cancelText: 'Cancel',
+		    cancel: function() {
+		         // add cancel code..
+		       },
+		    buttonClicked: function() {
+		    	$scope.openModal();
+		      	return true;
+		    },
+		    destructiveButtonClicked: function() {
+		    	$scope.showConfirm();
+		    	return true;
+		    }
+		});
+	}
+
+	$ionicModal.fromTemplateUrl('templates/modals/add-muso.html', {
+	    scope: $scope,
+	    animation: 'slide-in-up'
+	  }).then(function(modal) {
+	    $scope.modal = modal;
+	  });
+	  $scope.openModal = function() {
+	    $scope.modal.show();
+	  };
+	  $scope.closeModal = function() {
+	    $scope.modal.hide();
+	  };
+	  //Cleanup the modal when we're done with it!
+	  $scope.$on('$destroy', function() {
+	    $scope.modal.remove();
+	  });
+
+	  // A confirm dialog
+	  $scope.showConfirm = function() {
+	    var confirmPopup = $ionicPopup.confirm({
+	      title: 'Delete?',
+	      template: 'Are you sure you want to delete {{muso.firstName}}'
+	    });
+	    confirmPopup.then(function(res) {
+	      if(res) {
+	      	$scope.deleteMuso($scope.muso);
+	      } else {
+	        console.log('You are not sure');
+	      }
+	    });
+	  };
 })
+
 
 .controller('VenueCtrl', function($scope, venueService, $ionicModal) {
 	$scope.venues = venueService.getAll();

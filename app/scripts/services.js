@@ -41,7 +41,7 @@ angular.module('MusoList.services', [])
 
 }])
 
-.service('musoService', ['$firebase', function($firebase){
+.service('musoService', ['$firebase', '$state', function($firebase, $state){
   var ref = new Firebase("https://glowing-inferno-2667.firebaseio.com/musos");
   var musos = $firebase(ref).$asArray();
 
@@ -54,8 +54,22 @@ angular.module('MusoList.services', [])
   };
 
   this.saveMuso = function(muso){
-    musos.$add(muso);
+    musos.$add(muso).then(function(ref){
+      $state.go('tab.musos');
+    });
   };
+
+  this.updateRecord = function(muso){
+    console.log('serv', muso);
+    musos.$save(muso);
+  };
+
+  this.deleteRecord = function(muso){
+    musos.$remove(muso).then(function(ref) {
+      $state.go('tab.musos');
+    });
+  };
+
 }])
 
 .service('venueService', ['$firebase', function($firebase){

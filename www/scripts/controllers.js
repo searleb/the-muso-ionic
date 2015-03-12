@@ -16,10 +16,6 @@ angular.module('MusoList.controllers', ["checklist-model"])
 
 	$scope.skills = skillsService.getAll();
 
-	$scope.saveSkill = function(skill){
-		skillsService.saveSkill(skill);
-	};
-
 	$ionicModal.fromTemplateUrl('templates/modals/add-muso.html', {
 	    scope: $scope,
 	    animation: 'slide-in-up'
@@ -35,14 +31,6 @@ angular.module('MusoList.controllers', ["checklist-model"])
 	  //Cleanup the modal when we're done with it!
 	  $scope.$on('$destroy', function() {
 	    $scope.modal.remove();
-	  });
-	  // Execute action on hide modal
-	  $scope.$on('modal.hidden', function() {
-	    // Execute action
-	  });
-	  // Execute action on remove modal
-	  $scope.$on('modal.removed', function() {
-	    // Execute action
 	  });
 
 })
@@ -139,27 +127,41 @@ angular.module('MusoList.controllers', ["checklist-model"])
 	  $scope.$on('$destroy', function() {
 	    $scope.modal.remove();
 	  });
-	  // Execute action on hide modal
-	  $scope.$on('modal.hidden', function() {
-	    // Execute action
-	  });
-	  // Execute action on remove modal
-	  $scope.$on('modal.removed', function() {
-	    // Execute action
-	  });
+
 })
 
 .controller('VenueDetailsCtrl', function($scope, $stateParams, venueService) {
   $scope.venueDetails = venueService.getVenueDetails($stateParams.venueId);
 })
 
-.controller('ManageCtrl', function($scope, loginService, $ionicSlideBoxDelegate) {
+.controller('ManageCtrl', function($scope, loginService, $ionicModal, skillsService) {
 
 
 	$scope.logout = function(){
 		loginService.logout();
 	};
 
+	$scope.saveSkill = function(skill){
+		skillsService.saveSkill(skill);
+	};
 
+	$scope.skills = skillsService.getAll();
+
+	$ionicModal.fromTemplateUrl('templates/modals/add-skill.html', {
+	    scope: $scope,
+	    animation: 'slide-in-up'
+	  }).then(function(modal) {
+	    $scope.modal = modal;
+	  });
+	  $scope.openModal = function() {
+	    $scope.modal.show();
+	  };
+	  $scope.closeModal = function() {
+	    $scope.modal.hide();
+	  };
+	  //Cleanup the modal when we're done with it!
+	  $scope.$on('$destroy', function() {
+	    $scope.modal.remove();
+	  });
 
 });

@@ -5,26 +5,7 @@
       </ion-nav-back-button>
     </ion-nav-bar>
         <ion-content class="has-header padding">
-                <ion-slide-box>
-                    <!-- add muso -->
-                    <ion-slide>
-                    <h3>Add Muso</h3>
-                        <ng-include src="'views/muso-form.html'"></ng-include>
-                    </ion-slide>
-                    <!-- add venue -->
-                    <ion-slide>
-                        <h3>Add Venue</h3>
-                        <ng-include src="'views/venue-form.html'"></ng-include>
-                    </ion-slide>
-                <ion-slide>
-                <h3>Add Venue</h3>
-                <ng-include src="'views/skills-form.html'"></ng-include>
-                </ion-slide>
-        </ion-slide-box>
             <button class="button button-positive" ng-click="logout()">Logout</button>
-
-
-        <!-- <button class="button button-positive" ng-click="openModal()">Skills</button> -->
-
+            <button class="button button-positive" ng-click="openModal()">Add Skills</button>
         </ion-content>
 </ion-view>

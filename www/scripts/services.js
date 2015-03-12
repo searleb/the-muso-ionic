@@ -98,9 +98,9 @@ angular.module('MusoList.services', [])
       return skills.$asObject();
     };
 
-    this.saveSkill = function(skill){      
+    this.saveSkill = function(skill){ 
       skillsArray.$add(skill).then(function(ref){
-        alert(skill + ' was saved sucessfully');
+        alert(skill + ' was saved sucessfully', ref);
       });
     };
 

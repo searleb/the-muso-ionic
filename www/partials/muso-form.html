@@ -21,7 +21,8 @@
     </label>
 
     <ul class="list">
-        <li class="item item-checkbox" ng-repeat="skill in skills">
+        <span class="input-label">&nbsp; &nbsp;Skills</span>
+        <li class="item item-checkbox" ng-repeat="skill in skills | orderBy:'value'">
             <label class="checkbox">
                 <input type="checkbox" checklist-model="muso.instruments" checklist-value="skill">
             </label>

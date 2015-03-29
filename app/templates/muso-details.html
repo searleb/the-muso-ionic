@@ -7,7 +7,9 @@
             <div class="item item-icon-right" type="item-text-wrap">
                 <h2>{{muso.firstName}} {{muso.lastName}}</h2>
     			<tel>{{muso.phone}}</tel>
-    			<p>{{muso.email}}</p>
+    			<a href="mailto:{{muso.email}}">
+                    <p>{{muso.email}}</p>
+                </a>
     			<p>{{muso.location}}</p>
     			<p>{{muso.rating}}</p>
     			<p>{{muso.notes}}</p>
@@ -18,6 +20,7 @@
             	</ul>
             </div>
         </div>
+        <button ng-click="share()">Share</button>
       </ion-content>
 </ion-view>
 

@@ -35,7 +35,7 @@ angular.module('MusoList.controllers', ["checklist-model"])
 
 })
 
-.controller('MusoDetailsCtrl', function($scope, $stateParams, musoService, $ionicModal, $ionicActionSheet, $ionicPopup, skillsService) {
+.controller('MusoDetailsCtrl', function($scope, $stateParams, musoService, $ionicModal, $ionicActionSheet, $ionicPopup, skillsService, $cordovaSocialSharing) {
 	$scope.muso = musoService.getMusoDetails($stateParams.musoId);
 	$scope.skills = skillsService.getAll();
 	console.log($scope.muso);
@@ -102,6 +102,11 @@ angular.module('MusoList.controllers', ["checklist-model"])
 	      }
 	    });
 	  };
+
+	  // sharing
+	  $scope.share = function(){
+	  	$cordovaSocialSharing.share("test message", "test title", null, 'http://billsearle.me');
+	  }
 })
 
 

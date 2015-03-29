@@ -15,7 +15,7 @@
 	    <div class="list card" ng-repeat="muso in musos | filter:searchText">
 	        <div class="item item-icon-right" type="item-text-wrap">
 	            <a href="#/tab/muso/{{muso.$id}}"><h2>{{muso.firstName}} {{muso.lastName}}</h2></a>
-				<tel>{{muso.phone}}</tel>
+				<a href="tel:{{muso.phone}}">{{muso.phone}}</a>
 				<i class="icon ion-chevron-right icon-accessory"></i>
 			</div>
 	        <div class="item item-body">

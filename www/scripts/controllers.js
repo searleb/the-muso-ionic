@@ -35,8 +35,9 @@ angular.module('MusoList.controllers', ["checklist-model"])
 
 })
 
-.controller('MusoDetailsCtrl', function($scope, $stateParams, musoService, $ionicModal, $ionicActionSheet, $ionicPopup) {
+.controller('MusoDetailsCtrl', function($scope, $stateParams, musoService, $ionicModal, $ionicActionSheet, $ionicPopup, skillsService) {
 	$scope.muso = musoService.getMusoDetails($stateParams.musoId);
+	$scope.skills = skillsService.getAll();
 	console.log($scope.muso);
 
 	$scope.saveMuso = function(muso) {
@@ -130,8 +131,31 @@ angular.module('MusoList.controllers', ["checklist-model"])
 
 })
 
-.controller('VenueDetailsCtrl', function($scope, $stateParams, venueService) {
-  $scope.venueDetails = venueService.getVenueDetails($stateParams.venueId);
+.controller('VenueDetailsCtrl', function($scope, $stateParams, venueService, $ionicModal) {
+  $scope.venue = venueService.getVenueDetails($stateParams.venueId);
+
+  $scope.saveVenue = function(venue) {
+  	console.log('cont', venue);
+  	venueService.updateRecord(venue);
+  };
+
+  $ionicModal.fromTemplateUrl('templates/modals/add-venue.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+    $scope.openModal = function() {
+      $scope.modal.show();
+    };
+    $scope.closeModal = function() {
+      $scope.modal.hide();
+    };
+    //Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function() {
+      $scope.modal.remove();
+    });
+
 })
 
 .controller('ManageCtrl', function($scope, loginService, $ionicModal, skillsService) {

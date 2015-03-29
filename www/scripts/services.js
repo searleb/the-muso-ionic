@@ -86,6 +86,10 @@ angular.module('MusoList.services', [])
 
   this.saveVenue = function(venue){
     venues.$add(venue);
+  };
+
+  this.updateRecord =  function(venue){
+    venues.$save(venue);
   }
 }])
 

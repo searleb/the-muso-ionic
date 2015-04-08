@@ -8,8 +8,12 @@
 	            <h2>{{venue.name}}</h2>
 				<tel>{{venue.phone}}</tel>
 				<address>{{venue.address}}</address>
-				<p>{{venue.email}}</p>
-				<p>{{venue.website}}</p>
+				<a href="mailto:{{venue.email}}">
+	                <p>{{venue.email}}</p>
+	            </a>
+				<a href="{{venue.website}}">
+					<p>{{venue.website}}</p>
+				</a>
 			</div>
   	</ion-content>
 </ion-view>
